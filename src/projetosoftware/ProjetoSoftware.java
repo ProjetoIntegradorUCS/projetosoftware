@@ -8,6 +8,7 @@ import java.sql.SQLException;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import DAO.bd.Conexao.Conexao;
+import View.Gui.GuiLivrosAutor;
 
 public class ProjetoSoftware 
 {
@@ -15,12 +16,14 @@ public class ProjetoSoftware
     private GuiAutor guiAutor;
     private GuiLivro guiLivro;
     private GuiEdicao guiEdicao;
+    private GuiLivrosAutor guiLivrosAutor;
     
     public ProjetoSoftware() 
     {
         guiAutor  = new GuiAutor(new JFrame(), true);
         guiLivro  = new GuiLivro(new JFrame(), true);
         guiEdicao = new GuiEdicao(new JFrame(), true);
+        guiLivrosAutor = new GuiLivrosAutor(new JFrame(), true);
         
         conexao = new Conexao();
     }
@@ -62,6 +65,7 @@ public class ProjetoSoftware
     {
         this.getGuiEdicao().setVisible(false);
         this.getGuiLivro().setVisible(false);
+        this.getGuiLivrosAutor().setVisible(false);
         
         this.getGuiAutor().getCoAutor().limpar();
         this.getGuiAutor().setVisible(true);
@@ -71,6 +75,7 @@ public class ProjetoSoftware
     {
         this.getGuiEdicao().setVisible(false);
         this.getGuiAutor().setVisible(false);
+        this.getGuiLivrosAutor().setVisible(false);
         
         this.getGuiLivro().getCo().limpar();
         this.getGuiLivro().setVisible(true);
@@ -80,9 +85,20 @@ public class ProjetoSoftware
     {
         this.getGuiLivro().setVisible(false);
         this.getGuiAutor().setVisible(false);
+        this.getGuiLivrosAutor().setVisible(false);
         
         this.getGuiEdicao().getCo().limpar();
         this.getGuiEdicao().setVisible(true);
+    }
+    
+    public void mostrarTelaLivrosAutor()
+    {
+        this.getGuiLivro().setVisible(false);
+        this.getGuiAutor().setVisible(false);
+        this.getGuiEdicao().setVisible(false);
+        
+        this.getGuiLivrosAutor().getCo().limpar();
+        this.getGuiLivrosAutor().setVisible(true);
     }
     
     public static Conexao getConexao() 
@@ -105,11 +121,16 @@ public class ProjetoSoftware
         return guiEdicao;
     }
     
+    public GuiLivrosAutor getGuiLivrosAutor() 
+    {
+        return guiLivrosAutor;
+    }
+    
     public static void main(String[] args) 
     {
         ProjetoSoftware ps = new ProjetoSoftware();
         ps.conectar();
-        ps.mostrarTelaLivro();
+        ps.mostrarTelaLivrosAutor();
         ps.desconectar();
     }
 }
