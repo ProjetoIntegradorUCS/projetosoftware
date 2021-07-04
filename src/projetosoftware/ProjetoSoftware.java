@@ -130,7 +130,7 @@ public class ProjetoSoftware
     {
         ProjetoSoftware ps = new ProjetoSoftware();
         ps.conectar();
-        ps.mostrarTelaLivrosAutor();
+        ps.mostrarTelaLivro();
         ps.desconectar();
     }
 }
