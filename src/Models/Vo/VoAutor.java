@@ -20,31 +20,16 @@ public class VoAutor implements I_VO{
     }
 
     // construtor
-    public VoAutor(int codigo) 
-    {
-        this.codigo = codigo;
-    }
+    public VoAutor(int codigo) { this.codigo = codigo; }
 
     // getters and setters
-    public int getCodigo() 
-    {
-        return codigo;
-    }
+    public int getCodigo() { return codigo; }
 
-    public void setCodigo(int codigo) 
-    {
-        this.codigo = codigo;
-    }
+    public void setCodigo(int codigo) { this.codigo = codigo; }
 
-    public String getNome() 
-    {
-        return nome;
-    }
+    public String getNome() { return nome; }
 
-    public void setNome(String nome) 
-    {
-        this.nome = nome;
-    }
+    public void setNome(String nome) { this.nome = nome; }
 
     @Override
     public String toString() 
