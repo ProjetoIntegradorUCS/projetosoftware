@@ -94,33 +94,15 @@ public class BoAutor implements I_BO
         return error;
     }
 
-    public VoAutor getVo() 
-    {
-        return vo;
-    }
+    public VoAutor getVo() { return vo; }
 
-    public void setVo(VoAutor vo) 
-    {
-        this.vo = vo;
-    }
+    public void setVo(VoAutor vo) { this.vo = vo; }
 
-    public String getErro() 
-    {
-        return this.erro;
-    }
+    public String getErro() { return this.erro; }
 
-    public void setErro(String erro) 
-    {
-        this.erro = erro;
-    }
+    public void setErro(String erro) { this.erro = erro; }
 
-    public DaoAutor getDao() 
-    {
-        return dao;
-    }
+    public DaoAutor getDao() { return dao; }
 
-    public void setDao(DaoAutor dao) 
-    {
-        this.dao = dao;
-    }
+    public void setDao(DaoAutor dao) { this.dao = dao; }
 }
